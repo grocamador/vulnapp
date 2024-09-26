@@ -12,6 +12,12 @@ Get web address:
 watch -n 1 echo 'http://$(kubectl get service vulnerable-example-com  -o yaml -o=jsonpath="{.status.loadBalancer.ingress[0].ip}")/'
 ```
 
+Run it as a nodePort instead:
+
+```
+kubectl apply -f  https://raw.githubusercontent.com/crowdstrike/vulnapp/main/vulnerable.example.yaml
+```
+
 If the `ip` field is not present try:
 ```
 
@@ -20,7 +26,7 @@ watch -n 1 echo 'http://$(kubectl get service vulnerable-example-com  -o yaml -o
 
 Delete the app:
 ```
-kubectl delete -f  https://raw.githubusercontent.com/crowdstrike/vulnapp/main/vulnerable.example.yaml
+kubectl delete -f  https://raw.githubusercontent.com/crowdstrike/vulnapp/main/vulnerable.example.np.yaml
 ```
 
 ## Usage - OpenShift
