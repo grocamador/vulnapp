@@ -15,7 +15,7 @@ watch -n 1 echo 'http://$(kubectl get service vulnerable-example-com  -o yaml -o
 Run it as a nodePort instead:
 
 ```
-kubectl apply -f  https://raw.githubusercontent.com/crowdstrike/vulnapp/main/vulnerable.example.yaml
+kubectl apply -f  https://raw.githubusercontent.com/crowdstrike/vulnapp/main/vulnerable.example.np.yaml
 ```
 
 If the `ip` field is not present try:
