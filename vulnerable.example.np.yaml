@@ -35,5 +35,5 @@ spec:
     run: vulnerable.example.com
   ports:
     - port: 80
-      NodePort: 30081
+      nodePort: 30081
   type: NodePort
